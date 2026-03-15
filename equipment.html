@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ระบบคลังอุปกรณ์กีฬา</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <nav>
+        <h1 class="logo">ระบบ<span class="blue">ยืม-คืน อุปกรณ์กีฬา</span></h1>
+        <ul>
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="borrow.html">ระบบยืม-คืนอุปกรณ์</a></li>
+            <li><a href="equipment.html">คลังอุปกรณ์</a></li>
+        </ul>
+    </nav>
+    
+<div class="container">
+<h1>🏬 ระบบคลังอุปกรณ์กีฬา (ผู้ดูแล)</h1>
+
+<!-- ฟอร์มเพิ่มอุปกรณ์ -->
+<form id="equipmentForm">
+    <input type="text" id="equipmentCode" name="equipment_code" placeholder="รหัสอุปกรณ์" required>
+    <input type="text" id="equipmentName" name="equipment_name" placeholder="ชื่ออุปกรณ์" required>
+    <input type="number" id="equipmentTotal" name="total" placeholder="จำนวนทั้งหมด" required>
+    <button type="submit">➕ เพิ่มอุปกรณ์</button>
+</form>
+
+<!-- ตารางคลัง -->
+<table>
+    <thead>
+        <tr>
+            <th>รหัสอุปกรณ์กีฬา</th>
+            <th>อุปกรณ์กีฬา</th>
+            <th>จำนวนทั้งหมด</th>
+            <th>คงเหลือ</th>
+            <th>จัดการ</th>
+        </tr>
+    </thead>
+    <tbody id="stockTable"></tbody>
+</table>
+    </div>
+
+<!-- <script src="scripstock.js"></script> -->
+<script src="script/equipment.js" defer></script>
+</body>
+</html>

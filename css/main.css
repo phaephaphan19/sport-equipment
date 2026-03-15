@@ -1,0 +1,231 @@
+/* ===============================
+   RESET + BASE
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 30px;
+    padding-top: 140px;
+    animation: bgMove 10s infinite alternate;
+}
+
+@keyframes bgMove {
+    from { filter: hue-rotate(0deg); }
+    to { filter: hue-rotate(15deg); }
+}
+
+/* ===============================
+   NAVBAR (ALL PAGES)
+================================ */
+nav {
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.15);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.blue {
+    color: #287bff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin-right: 80px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #667eea;
+}
+
+/* ===============================
+   CONTAINER (FOR ALL PAGES)
+================================ */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    background: rgba(255,255,255,0.95);
+    padding: 35px 40px;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===============================
+   HEADINGS
+================================ */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* ===============================
+   FORMS
+================================ */
+form {
+    display: flex;
+    gap: 12px;
+    margin: 15px 0 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+form input,
+form select {
+    flex: 1;
+    min-width: 180px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+form input:focus,
+form select:focus {
+    outline: none;
+    border-color: #764ba2;
+    box-shadow: 0 0 0 3px rgba(118,75,162,0.2);
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+button,
+.button {
+    padding: 12px 22px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+button:hover,
+.button:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(102,126,234,0.5);
+}
+
+/* ===============================
+   TABLE
+================================ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+thead {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+th, td {
+    padding: 14px 12px;
+    text-align: center;
+}
+
+tbody tr {
+    transition: 0.3s;
+}
+
+tbody tr:hover {
+    background: #f5f5ff;
+}
+
+/* ===============================
+   CARDS (INDEX PAGE)
+================================ */
+.profile-card {
+    max-width: 420px;
+    margin: auto;
+    margin-top: 40px;
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.avatar-index {
+    width: 140px;
+    border-radius: 50%;
+    border: 4px solid #667eea;
+    margin-bottom: 15px;
+}
+
+.role {
+    color: #666;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ===============================
+   STATUS
+================================ */
+.status-borrow {
+    color: #ff9800;
+    font-weight: bold;
+}
+
+.status-return {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+    form {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-right: 20px;
+    }
+}
